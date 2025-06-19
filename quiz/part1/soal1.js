@@ -20,6 +20,45 @@
 // algoritma
 //isi algoritma mu disini (AWAS KALO GA DI ISI!!!!)
 
-let nama = "", peran = "";
+let nama = "Frieren", peran = "Penyihir";
 
 //code disini gunakan console.log untuk outputnya
+
+// Menggunakan if else
+if (nama === "") {
+    console.log("Nama wajib diisi");
+} else if (peran === "") {
+    console.log("Pilih peranmu untuk memulai game !")
+} else {
+    if (peran === "Ksatria") {
+        console.log(`halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`)
+    } else if (peran === "Tabib") {
+        console.log(`halo Tabib ${nama} , kamu akan membantu temanmu yang terluka`)
+    } else if (peran === "Penyihir") {
+        console.log(`halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`)
+    } else {
+        console.log(`tapi kayaknya kamu jadi bot aja ya, peran yang kamu pilih ga ada`)
+    }
+}
+
+
+// Menggunakan switch case
+if (nama === "") {
+    console.warn("Nama wajib diisi");
+} else if (peran === "") {
+    console.log("Pilih peranmu untuk memulai game !")
+} else {
+    switch (peran) {
+        case "Ksatria" :
+            console.log(`halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`);
+            break;
+        case "Tabib" :
+            console.log(`halo Tabib ${nama} , kamu akan membantu temanmu yang terluka`);
+            break;
+        case "Penyihir" :
+            console.log(`halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`);
+            break;
+        default :
+            console.log(`tapi kayaknya kamu jadi bot aja ya, peran yang kamu pilih ga ada`);
+    }
+}
